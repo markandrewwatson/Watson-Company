@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Watson & Company embeds senior growth strategy and commercial excellence talent into private equity value-creation teams, portfolio companies, and advisory firms: commercial due diligence, growth strategy, commercial excellence, and FP&A.">
+<title>Watson & Company</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+  :root{
+    --ink:#182337; --ink-2:#4A5568; --ink-3:#7A8494;
+    --paper:#F6F7F9; --paper-2:#FFFFFF; --rule:#D9DEE6;
+    --navy:#14213D; --navy-2:#1C2D52; --navy-text:#EEF1F6; --navy-muted:#A9B4C8; --navy-rule:#2C3E63;
+    --accent:#B0782E; --accent-ink:#8E5F1F;
+    --serif:"Newsreader",Georgia,"Times New Roman",serif;
+    --sans:"IBM Plex Sans","Helvetica Neue",Arial,sans-serif;
+    --max:1120px; --gutter:clamp(16px,4vw,40px);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ink:#E8ECF2; --ink-2:#B3BCCB; --ink-3:#8590A3;
+      --paper:#0F1522; --paper-2:#161E2E; --rule:#2A3448;
+      --navy:#0B1020; --navy-2:#121A2E; --navy-text:#EEF1F6; --navy-muted:#A9B4C8; --navy-rule:#243050;
+      --accent:#D2A055; --accent-ink:#D2A055;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ink:#E8ECF2; --ink-2:#B3BCCB; --ink-3:#8590A3;
+    --paper:#0F1522; --paper-2:#161E2E; --rule:#2A3448;
+    --navy:#0B1020; --navy-2:#121A2E; --navy-text:#EEF1F6; --navy-muted:#A9B4C8; --navy-rule:#243050;
+    --accent:#D2A055; --accent-ink:#D2A055;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} }
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+  .wrap{max-width:var(--max);margin-inline:auto;padding-inline:var(--gutter)}
+  h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.15;margin:0;text-wrap:balance}
+  p{margin:0}
+  .eyebrow{font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink)}
+
+  /* header */
+  .top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--navy);color:var(--navy-text);border-bottom:1px solid var(--navy-rule)}
+  .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:64px}
+  .brand{font-family:var(--serif);font-size:22px;font-weight:500;letter-spacing:.01em;text-decoration:none;white-space:nowrap}
+  .brand span{color:var(--accent)}
+  nav{display:flex;gap:28px}
+  nav a{text-decoration:none;font-size:14px;font-weight:500;color:var(--navy-muted);letter-spacing:.02em}
+  nav a:hover{color:var(--navy-text)}
+  @media (max-width:520px){ nav{gap:18px} nav a{font-size:13px} .brand{font-size:19px} }
+
+  /* hero */
+  .hero{background:var(--navy);color:var(--navy-text)}
+  .hero .wrap{padding-block:clamp(56px,9vw,112px) clamp(48px,7vw,88px);display:grid;grid-template-columns:minmax(0,1fr);gap:32px}
+  .hero h1{font-size:clamp(30px,4.2vw,50px);max-width:19ch;font-weight:500}
+  .hero h1 em{font-style:italic;color:var(--accent)}
+  .hero .lede{font-size:clamp(17px,1.5vw,20px);line-height:1.55;max-width:58ch;color:var(--navy-muted)}
+  .hero .meta{display:flex;flex-wrap:wrap;gap:10px 28px;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--navy-muted);border-top:1px solid var(--navy-rule);padding-top:22px}
+  .cta{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:#14213D;text-decoration:none;font-weight:600;font-size:15px;padding:13px 22px;border-radius:2px;width:fit-content}
+  .cta:hover{background:#C48A3E}
+
+  /* sections */
+  section{padding-block:clamp(56px,7vw,96px)}
+  .sec-head{display:grid;grid-template-columns:minmax(0,1fr);gap:14px;margin-bottom:clamp(32px,4vw,48px);max-width:60ch}
+  .sec-head h2{font-size:clamp(28px,3.2vw,40px)}
+  .sec-head p{color:var(--ink-2);font-size:17px}
+
+  /* model */
+  .model{background:var(--paper-2);border-block:1px solid var(--rule)}
+  .model-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid var(--rule)}
+  .model-grid > div{padding:28px 28px 28px 0;border-bottom:1px solid var(--rule)}
+  .model-grid > div + div{padding-left:28px;border-left:1px solid var(--rule)}
+  .model-grid h3{font-size:22px;margin-bottom:10px}
+  .model-grid p{color:var(--ink-2);font-size:16px}
+  @media (max-width:820px){
+    .model-grid{grid-template-columns:minmax(0,1fr)}
+    .model-grid > div + div{padding-left:0;border-left:0}
+  }
+
+  /* services */
+  .svc{display:grid;grid-template-columns:minmax(0,1fr);gap:0}
+  .svc-row{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,4vw,64px);padding-block:40px;border-top:1px solid var(--rule)}
+  .svc-row:last-child{border-bottom:1px solid var(--rule)}
+  .svc-row h3{font-size:clamp(24px,2.4vw,30px);margin-bottom:12px}
+  .svc-row .lead{color:var(--ink-2);font-size:16px;max-width:44ch}
+  .qs{list-style:none;margin:0 0 22px;padding:0;display:grid;gap:12px}
+  .qs li{font-family:var(--serif);font-size:19px;line-height:1.4;padding-left:20px;position:relative;color:var(--ink)}
+  .qs li::before{content:"";position:absolute;left:0;top:.62em;width:9px;height:1px;background:var(--accent)}
+  .caps{display:flex;flex-wrap:wrap;gap:8px}
+  .caps span{font-size:13px;font-weight:500;color:var(--ink-2);border:1px solid var(--rule);background:var(--paper-2);padding:5px 11px;border-radius:2px}
+  @media (max-width:820px){ .svc-row{grid-template-columns:minmax(0,1fr);gap:20px} }
+
+  /* about */
+  .about{background:var(--paper-2);border-block:1px solid var(--rule)}
+  .about-grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:clamp(28px,5vw,72px);align-items:start}
+  .about img{display:block;width:100%;max-width:420px;aspect-ratio:4/5;object-fit:cover;border-radius:2px;background:#fff}
+  .about h2{font-size:clamp(28px,3.2vw,40px);margin-bottom:6px}
+  .about .role{color:var(--accent-ink);font-weight:600;font-size:14px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:24px}
+  .bio{display:grid;gap:16px;max-width:62ch;color:var(--ink-2)}
+  .bio p{font-size:17px}
+  .links{display:flex;flex-wrap:wrap;gap:14px 28px;margin-top:28px;padding-top:22px;border-top:1px solid var(--rule)}
+  .links a{font-size:15px;font-weight:600;text-decoration:none;color:var(--ink);display:inline-flex;align-items:center;gap:8px}
+  .links a:hover{color:var(--accent-ink)}
+  .links svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  @media (max-width:820px){ .about-grid{grid-template-columns:minmax(0,1fr)} .about img{max-width:320px} }
+
+  /* contact */
+  .contact{background:var(--navy);color:var(--navy-text)}
+  .contact .wrap{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:32px;align-items:end}
+  .contact h2{font-size:clamp(28px,3.2vw,40px);max-width:22ch}
+  .contact p{color:var(--navy-muted);max-width:52ch;margin-top:14px}
+  .contact .cta{white-space:nowrap}
+  @media (max-width:700px){ .contact .wrap{grid-template-columns:minmax(0,1fr)} }
+
+  footer{background:var(--navy);color:var(--navy-muted);border-top:1px solid var(--navy-rule)}
+  footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 24px;padding-block:22px;font-size:13px}
+  footer a{color:var(--navy-muted);text-decoration:none}
+  footer a:hover{color:var(--navy-text)}
+</style>
+
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">Watson <span>&amp;</span> Company</a>
+    <nav aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <p class="eyebrow">Growth Strategy · Commercial Excellence · Value Creation</p>
+    <h1>Senior commercial strategy talent that <em>plugs into your team</em> for the work that moves top line and EBITDA.</h1>
+    <p class="lede">Watson &amp; Company works with middle-market private equity funds, their portfolio companies, and the advisory firms that serve them, on commercial due diligence, growth strategy, commercial excellence, and FP&amp;A. Not a firm with a bench. One experienced principal who joins your workstream and carries it.</p>
+    <a class="cta" href="#contact">Start a conversation</a>
+    <div class="meta">
+      <span>Chicago, remote-ready</span>
+      <span>Founded 2023</span>
+      <span>10+ years in PE-focused consulting</span>
+    </div>
+  </div>
+</section>
+
+<section class="model">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">How engagements work</p>
+      <h2>Built to embed, not to bolt on.</h2>
+      <p>Watson &amp; Company does not sell packaged projects. Mark joins an existing team as a senior contributor on a defined workstream, for weeks or months, and works inside your tools, your data room, and your operating cadence.</p>
+    </div>
+    <div class="model-grid">
+      <div>
+        <h3>Inside fund value-creation teams</h3>
+        <p>Deal and operating partners get an extra senior hand on diligence, 100-day planning, and portfolio commercial reviews, without adding a full engagement team and its overhead.</p>
+      </div>
+      <div>
+        <h3>Inside portfolio companies</h3>
+        <p>CEOs, CROs, and CFOs get a strategist who builds the market model, the revenue plan, or the sales-org design alongside their people, so the capability stays after the work ends.</p>
+      </div>
+      <div>
+        <h3>Inside advisory firms</h3>
+        <p>Boutique strategy and value-creation firms get a principal-level contractor who can lead a case workstream on day one, with the PE-fluency and client presence the role demands.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Services</p>
+      <h2>Four disciplines. The same questions every deal team is already asking.</h2>
+    </div>
+    <div class="svc">
+
+      <div class="svc-row">
+        <div>
+          <h3>Commercial Due Diligence</h3>
+          <p class="lead">Buy-side and sell-side. An independent read on whether the commercial story in the deck survives contact with customers, competitors, and the numbers.</p>
+        </div>
+        <div>
+          <ul class="qs">
+            <li>Does the market want what this company sells, at the price and volume the model needs?</li>
+            <li>Where will the growth in the plan come from, and what has to be built or bought to get it?</li>
+            <li>Which assumptions, if wrong, break the returns?</li>
+          </ul>
+          <div class="caps">
+            <span>Customer and channel interviews</span><span>Competitive positioning</span><span>Market and pricing analysis</span><span>Management and capability assessment</span><span>Red-flag and upside memo</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="svc-row">
+        <div>
+          <h3>Growth Strategy</h3>
+          <p class="lead">Turning a value-creation thesis into a ranked list of markets, segments, and moves, with the economics behind each one.</p>
+        </div>
+        <div>
+          <ul class="qs">
+            <li>How big is the real opportunity, and which slices of it are worth pursuing first?</li>
+            <li>What are the winners in this space doing differently, and what would it take to catch them?</li>
+            <li>Where does the next dollar go: product, marketing, sales, or acquisitions?</li>
+          </ul>
+          <div class="caps">
+            <span>Market sizing and segmentation</span><span>Growth-lever prioritization</span><span>Adjacency and bolt-on screening</span><span>Pricing and packaging</span><span>Board-ready growth plan</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="svc-row">
+        <div>
+          <h3>Commercial Excellence</h3>
+          <p class="lead">Making the sales and marketing engine capable of the plan: structure, coverage, process, and the metrics that show whether it is working.</p>
+        </div>
+        <div>
+          <ul class="qs">
+            <li>Is the commercial team built for the targets, or for the company it used to be?</li>
+            <li>Where does pipeline leak, and which fixes move bookings this year rather than next?</li>
+            <li>Do leadership and the board see the same revenue picture, early enough to act on it?</li>
+          </ul>
+          <div class="caps">
+            <span>Sales organization and coverage design</span><span>Go-to-market playbooks</span><span>Pipeline and funnel diagnostics</span><span>KPI frameworks and dashboards</span><span>Revenue forecasting and planning</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="svc-row">
+        <div>
+          <h3>FP&amp;A and Financial Analysis</h3>
+          <p class="lead">Finance support with an operator's instincts: the analysis behind the commercial plan, and the reporting that keeps it honest.</p>
+        </div>
+        <div>
+          <ul class="qs">
+            <li>Which customers, products, and units actually earn their keep?</li>
+            <li>Does the monthly reporting produce decisions, or just statements?</li>
+          </ul>
+          <div class="caps">
+            <span>Profitability analysis</span><span>Business-unit and product-line reviews</span><span>Management reporting design</span><span>Budget and scenario models</span><span>Acquisition screening support</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <img src="headshot.jpg" alt="Mark Watson, founder and principal of Watson & Company" width="560" height="700">
+    <div>
+      <p class="eyebrow">About</p>
+      <h2>Mark Watson</h2>
+      <p class="role">Founder &amp; Principal</p>
+      <div class="bio">
+        <p>Mark Watson is the founder and principal of Watson &amp; Company, a Chicago-based consultancy that embeds senior strategy and commercial talent into private equity value-creation teams, portfolio companies, and boutique advisory firms.</p>
+        <p>He brings more than ten years in consulting, most recently as a Principal with a growth and commercial advisory firm serving middle-market private equity funds and their portfolio companies, and earlier with L.E.K. Consulting and Beckway Group, where he led case teams and workstreams on commercial due diligence, growth strategy, go-to-market execution, and commercial organization design across industrials, business services, and tech-enabled sectors.</p>
+        <p>Before consulting, he spent four years at Whirlpool Corporation in corporate strategy and business development, including its Global Finance Leadership Development Program, which grounds his commercial work in how operating companies actually run their numbers.</p>
+        <p>He founded Watson &amp; Company in 2023.</p>
+      </div>
+      <div class="links">
+        <a href="https://www.linkedin.com/in/mark-andrew-watson" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
+        <a href="mailto:mark@watsandco.com"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg>mark@watsandco.com</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Contact</p>
+      <h2>Have a workstream that needs a senior hand?</h2>
+      <p>Diligence with a closing date, a growth plan the board wants by next quarter, a revenue model that has to be rebuilt before budget season. Send a note with the situation and timing, and expect a reply within one business day.</p>
+    </div>
+    <a class="cta" href="mailto:mark@watsandco.com?subject=Watson%20%26%20Company%20inquiry">Email Mark</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Watson &amp; Company. Chicago, Illinois.</span>
+    <span><a href="https://www.linkedin.com/in/mark-andrew-watson" target="_blank" rel="noopener">LinkedIn</a> &nbsp;·&nbsp; <a href="mailto:mark@watsandco.com">mark@watsandco.com</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
